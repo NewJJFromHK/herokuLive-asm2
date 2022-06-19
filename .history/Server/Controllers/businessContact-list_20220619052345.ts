@@ -48,9 +48,9 @@ export function ProcessAddPage(req: express.Request, res: express.Response, next
   // instantiate a new Business Contact to Add
   let newBusinessContact = new businessContact
   ({
-    "ContactName": req.body.ContactName,
-    "ContactNumber": req.body.ContactNumber,
-    "EmailAddress": req.body.EmailAddress
+    "Contact Name": req.body.ContactName,
+    "Contact Number": req.body.ContactNumber,
+    "Email Address": req.body.EmailAddress
   });
 
   // Insert the new Business Contact object into the database (businessContact collection)

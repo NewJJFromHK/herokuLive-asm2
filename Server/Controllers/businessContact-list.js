@@ -33,9 +33,9 @@ function DisplayEditPage(req, res, next) {
 exports.DisplayEditPage = DisplayEditPage;
 function ProcessAddPage(req, res, next) {
     let newBusinessContact = new businessContact_1.default({
-        "Contact Name": req.body.ContactName,
-        "Contact Number": req.body.ContactNumber,
-        "Email Address": req.body.EmailAddress
+        "ContactName": req.body.ContactName,
+        "ContactNumber": req.body.ContactNumber,
+        "EmailAddress": req.body.EmailAddress
     });
     businessContact_1.default.create(newBusinessContact, function (err) {
         if (err) {
