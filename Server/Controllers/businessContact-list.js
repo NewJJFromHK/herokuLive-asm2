@@ -27,7 +27,7 @@ function DisplayEditPage(req, res, next) {
             console.error(err);
             res.end(err);
         }
-        res.render('index', { title: 'Edit', page: 'edit', BusinessContact: bBusinessContactToEdit, displayName: (0, Util_1.UserDisplayName)(req) });
+        res.render('index', { title: 'Edit', page: 'edit', BusinessContact: BusinessContactToEdit, displayName: (0, Util_1.UserDisplayName)(req) });
     });
 }
 exports.DisplayEditPage = DisplayEditPage;
