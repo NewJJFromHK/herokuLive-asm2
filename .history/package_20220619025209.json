@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "description": "Assignment 2 for COMP229 in the Summer 2022 semester",
   "main": "server.js",
-  "author": "kin Fung Lee",
+  "author": "Tom Tsiliopoulos",
   "license": "MIT",
   "private": true,
   "scripts": {

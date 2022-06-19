@@ -1,9 +1,9 @@
 {
-  "name": "comp229-m2022-Assignment-2",
+  "name": "comp229-m2022-Assignment 2-",
   "version": "0.0.3",
-  "description": "Assignment 2 for COMP229 in the Summer 2022 semester",
+  "description": "Demo Project for COMP229 in the Summer 2022 semester for Lesson 6",
   "main": "server.js",
-  "author": "kin Fung Lee",
+  "author": "Tom Tsiliopoulos",
   "license": "MIT",
   "private": true,
   "scripts": {

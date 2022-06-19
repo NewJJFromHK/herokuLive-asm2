@@ -15,16 +15,23 @@
 
         <div class="input-group mb-3">
             <span class="input-group-text">Contact Number</span>
-            <input id="contactNumber" name="ContactNumber" type="number" class="form-control" 
-            value="<%= businessContact.ContactNumber %>"
-            aria-label="Contact Number" aria-describedby="Movie Director Input" required>
+            <input id="cont" name="movieDirector" type="text" class="form-control" 
+            value="<%= movie.Director %>"
+            aria-label="Director Name" aria-describedby="Movie Director Input" required>
           </div>
 
         <div class="input-group mb-3">
-        <span class="input-group-text">Email Address</span>
-        <input id="emailAddress" name="EmailAddress" type="text" class="form-control" 
-        value="<%= businessContact.EmailAddress %>"
-        aria-label="Email Address" aria-describedby="Email Address Input" required>
+        <span class="input-group-text">Year Released</span>
+        <input id="movieYear" name="movieYear" type="text" class="form-control" 
+        value="<%= movie.Year %>"
+        aria-label="Movie Year" aria-describedby="Movie Year Input" required>
+        </div>
+
+        <div class="input-group mb-3">
+        <span class="input-group-text">Rating</span>
+        <input id="movieRating" name="movieRating" type="text" class="form-control" 
+        value="<%= movie.Rating %>"
+        aria-label="Movie Rating" aria-describedby="Movie Rating Input" required>
         </div>
         
         <% if(title == "Edit") { %>
@@ -33,7 +40,7 @@
         <button id="addButton" type="submit" class="btn btn-primary"><i class="fas fa-plus-circle fa-lg"></i> Add</button>
         <% } %>  
 
-        <a href="/businessContact-list" id="cancelButton" type="button" class="btn btn-warning"><i class="fas fa-undo fa-lg"></i> Cancel</a>
+        <a href="/movie-list" id="cancelButton" type="button" class="btn btn-warning"><i class="fas fa-undo fa-lg"></i> Cancel</a>
       
       </form>
 

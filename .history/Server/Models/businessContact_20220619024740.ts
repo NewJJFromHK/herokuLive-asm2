@@ -14,7 +14,7 @@ const BusinessContactSchema = new Schema
 });
 
 // Step 3- Create a Model using the Schema
-const Model = mongoose.model("Business Contact", BusinessContactSchema);
+const Model = mongoose.model("businessContact", BusinessContactSchema);
 
 // Step 4 - Export the Model -> converts this file into a module
 export default Model;
