@@ -1,0 +1,14 @@
+{
+    "movies":
+    [
+        {
+            {
+                _id: ObjectId("62aa2a72d393321841ff251e"),
+                Name: 'Star Wars',
+                Year: '1977',
+                Director: 'Georage Lucas',
+                Rating: '4 Stars'
+              }
+        }
+    ]
+}
