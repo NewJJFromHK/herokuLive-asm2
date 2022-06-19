@@ -1,0 +1,20 @@
+{
+    "Business Contact":
+    [
+        {
+            "Contact Name": "Elon Mars",
+            "Contact Number": "6473211111",
+            "Email Address": "Elon@gmail.com"
+        },
+        {
+            "Contact Name": "Celine Dion",
+            "Contact Number": "6473212222",
+            "Email Address": "Celine.D@gmail.com"
+        },
+        {
+            "ContactName": "Tim Bieber",
+            "ContactNumber": "6473213333",
+            "EmailAddress": "Tim.B@gmail.com"
+        }
+    ]
+}

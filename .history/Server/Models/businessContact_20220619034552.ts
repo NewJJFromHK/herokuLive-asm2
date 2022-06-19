@@ -6,8 +6,8 @@ const Schema = mongoose.Schema; // alias for mongoose.Schema
 const BusinessContactSchema = new Schema
 ({
     ContactName: String,
-    ContactNumber: String,
-    EmailAddress: String
+    ContactNumber : String,
+    EmailAddress : String
 },
 {
     collection: "Business Contact"

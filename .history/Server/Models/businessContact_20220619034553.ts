@@ -7,7 +7,7 @@ const BusinessContactSchema = new Schema
 ({
     ContactName: String,
     ContactNumber: String,
-    EmailAddress: String
+    EmailAddress : String
 },
 {
     collection: "Business Contact"

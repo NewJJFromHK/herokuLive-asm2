@@ -33,9 +33,9 @@ function DisplayEditPage(req, res, next) {
 exports.DisplayEditPage = DisplayEditPage;
 function ProcessAddPage(req, res, next) {
     let newBusinessContact = new businessContact_1.default({
-        "Contact Name": req.body.ContactName,
-        "Contact Number": req.body.ContactNumber,
-        "Email Address": req.body.EmailAddress
+        "Contact Name": req.body.BusinessContactContactName,
+        "Contact Number": req.body.BusinessContactContactNumber,
+        "Email Address": req.body.BusinessContactEmailAddress
     });
     businessContact_1.default.create(newBusinessContact, function (err) {
         if (err) {
@@ -50,9 +50,9 @@ function ProcessEditPage(req, res, next) {
     let id = req.params.id;
     let updatedBusinessContact = new businessContact_1.default({
         "_id": id,
-        "Contact Name": req.body.ContactName,
-        "Contact Number": req.body.ContactNumber,
-        "Email Address": req.body.EmailAddress
+        "Contact Name": req.body.BusinessContactName,
+        "Contact Number": req.body.BusinessContactNumber,
+        "Email Address": req.body.BusinessContactEmailAddress
     });
     businessContact_1.default.updateOne({ _id: id }, updatedBusinessContact, function (err) {
         if (err) {
