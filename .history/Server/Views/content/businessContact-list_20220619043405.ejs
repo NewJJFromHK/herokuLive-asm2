@@ -23,9 +23,9 @@
                         <!-- Create a new Table Row-->
                         <tr>
                             <th scope="row" class="text-center"><%= count + 1 %></th>
-                            <td><%= businessContact[count].Contact Name %></td>
-                            <td><%= businessContact[count].Contact Number %></td>
-                            <td><%= businessContact[count].Email Address %></td>
+                            <td><%= businessContact[count].\Contact Name %></td>
+                            <td><%= businessContact[count].businessContactNumber %></td>
+                            <td><%= businessContact[count].businessContactEmailAddress %></td>
                             <td class="text-center"><a href="/edit/<%= businessContact[count]._id %>" class="btn btn-primary btn-sm edit"><i class="fa-solid fa-pen-to-square"></i> Edit</a></td>
                             <td class="text-center"><a href="/delete/<%= businessContact[count]._id %>" class="btn btn-danger btn-sm delete"><i class="fa-solid fa-trash-can"></i> Delete</a></td>
                         </tr>
