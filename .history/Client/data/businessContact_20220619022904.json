@@ -1,0 +1,21 @@
+{
+    "businessContact":
+    [
+        {
+            "Contact Name": "Elon Mars",
+            "Contact Number": "6473211111",
+            "Email Address": "Elon@gmail.com"
+        },
+        {
+            "Contact Name": "Celine Dion",
+            "Contact Number": "6473212222",
+            "Email Address": "Celine.D@gmail.com"
+        },
+        {
+            "Name": "Tim Bieber",
+            "Year": "2022",
+            "Director": "Dan Kwan",
+            "Rating": "5.0 Stars"
+        }
+    ]
+}

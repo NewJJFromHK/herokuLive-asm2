@@ -1,0 +1,21 @@
+{
+    "businessContact":
+    [
+        {
+            "Contact Name": "Elon Mars",
+            "Contact Number": "6473211111",
+            "Email Address": "Elon@gmail.com"
+        },
+        {
+            "Contact Name": "Elon Mars",
+            "Contact Number": "6473211111",
+            "Email Address": "Elon@gmail.com"
+        },
+        {
+            "Name": "Everything Everywhere All at Once",
+            "Year": "2022",
+            "Director": "Dan Kwan",
+            "Rating": "5.0 Stars"
+        }
+    ]
+}
