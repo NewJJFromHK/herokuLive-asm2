@@ -77,7 +77,7 @@ export function ProcessEditPage(req: express.Request, res: express.Response, nex
     "_id": id,
     "Contact Name": req.body.businessContactName,
     "Contact Number": req.body.businessContactNumber,
-    "Email Address": req.body.businessContactEmailAddress
+    "Email Address": req.body.BusinessContactEmailAddress
   });
 
   // update the Business Contact in the database
