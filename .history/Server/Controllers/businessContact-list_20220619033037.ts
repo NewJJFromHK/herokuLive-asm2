@@ -99,7 +99,7 @@ export function ProcessDeletePage(req: express.Request, res: express.Response, n
   let id = req.params.id;
 
   // pass the id to the database and delete the businessContact
-  BusinessContact.remove({_id: id}, function(err: CallbackError)
+  businessContact.remove({_id: id}, function(err: CallbackError)
   {
     if(err)
     {

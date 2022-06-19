@@ -7,12 +7,12 @@ exports.ProcessDeletePage = exports.ProcessEditPage = exports.ProcessAddPage = e
 const businessContact_1 = __importDefault(require("../Models/businessContact"));
 const Util_1 = require("../Util");
 function DisplayBusinessContactListPage(req, res, next) {
-    businessContact_1.default.find(function (err, businessContactCollection) {
+    businessContact_1.default.find(function (err, BusinessContactCollection) {
         if (err) {
             console.error(err.message);
             res.end(err);
         }
-        res.render('index', { title: 'Business Contact List', page: 'businessContact-list', businessContact: businessContactCollection, displayName: (0, Util_1.UserDisplayName)(req) });
+        res.render('index', { title: 'Business Contact List', page: 'businessContact-list', BusinessContact: BusinessContactCollection, displayName: (0, Util_1.UserDisplayName)(req) });
     });
 }
 exports.DisplayBusinessContactListPage = DisplayBusinessContactListPage;
@@ -22,12 +22,12 @@ function DisplayAddPage(req, res, next) {
 exports.DisplayAddPage = DisplayAddPage;
 function DisplayEditPage(req, res, next) {
     let id = req.params.id;
-    businessContact_1.default.findById(id, {}, {}, function (err, businessContactToEdit) {
+    businessContact_1.default.findById(id, {}, {}, function (err, BusinessContactToEdit) {
         if (err) {
             console.error(err);
             res.end(err);
         }
-        res.render('index', { title: 'Edit', page: 'edit', businessContact: businessContactToEdit, displayName: (0, Util_1.UserDisplayName)(req) });
+        res.render('index', { title: 'Edit', page: 'edit', BusinessContact: bBusinessContactToEdit, displayName: (0, Util_1.UserDisplayName)(req) });
     });
 }
 exports.DisplayEditPage = DisplayEditPage;
@@ -54,7 +54,7 @@ function ProcessEditPage(req, res, next) {
         "Contact Number": req.body.businessContactNumber,
         "Email Address": req.body.businessContactEmailAddress
     });
-    businessContact_1.default.updateOne({ _id: id }, updatedBusinessContact, function (err) {
+    businessContact.updateOne({ _id: id }, updatedBusinessContact, function (err) {
         if (err) {
             console.error(err);
             res.end(err);

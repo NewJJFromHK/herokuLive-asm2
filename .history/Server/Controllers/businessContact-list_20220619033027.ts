@@ -72,7 +72,7 @@ export function ProcessEditPage(req: express.Request, res: express.Response, nex
   let id = req.params.id;
 
   // instantiate a new Business Contact to Edit
-  let updatedBusinessContact = new BusinessContact
+  let updatedBusinessContact = new businessContact
   ({
     "_id": id,
     "Contact Name": req.body.businessContactName,
@@ -99,7 +99,7 @@ export function ProcessDeletePage(req: express.Request, res: express.Response, n
   let id = req.params.id;
 
   // pass the id to the database and delete the businessContact
-  BusinessContact.remove({_id: id}, function(err: CallbackError)
+  businessContact.remove({_id: id}, function(err: CallbackError)
   {
     if(err)
     {
