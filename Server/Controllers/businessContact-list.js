@@ -7,12 +7,12 @@ exports.ProcessDeletePage = exports.ProcessEditPage = exports.ProcessAddPage = e
 const businessContact_1 = __importDefault(require("../Models/businessContact"));
 const Util_1 = require("../Util");
 function DisplayBusinessContactListPage(req, res, next) {
-    businessContact_1.default.find(function (err, BusinessContactCollection) {
+    businessContact_1.default.find(function (err, businessContactCollection) {
         if (err) {
             console.error(err.message);
             res.end(err);
         }
-        res.render('index', { title: 'Business Contact List', page: 'businessContact-list', BusinessContact: BusinessContactCollection, displayName: (0, Util_1.UserDisplayName)(req) });
+        res.render('index', { title: 'Business Contact List', page: 'businessContact-list', businessContact: businessContactCollection, displayName: (0, Util_1.UserDisplayName)(req) });
     });
 }
 exports.DisplayBusinessContactListPage = DisplayBusinessContactListPage;
@@ -22,7 +22,7 @@ function DisplayAddPage(req, res, next) {
 exports.DisplayAddPage = DisplayAddPage;
 function DisplayEditPage(req, res, next) {
     let id = req.params.id;
-    businessContact_1.default.findById(id, {}, {}, function (err, BusinessContactToEdit) {
+    businessContact_1.default.findById(id, {}, {}, function (err, businessContactToEdit) {
         if (err) {
             console.error(err);
             res.end(err);

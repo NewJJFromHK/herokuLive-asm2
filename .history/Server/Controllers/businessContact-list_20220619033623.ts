@@ -16,7 +16,7 @@ export function DisplayBusinessContactListPage(req: express.Request, res: expres
         console.error(err.message);
         res.end(err);
       }
-      res.render('index', { title: 'Business Contact List', page: 'businessContact-list', businessContact: businessContactCollection, displayName:  UserDisplayName(req)  });
+      res.render('index', { title: 'Business Contact List', page: 'businessContact-list', BusinessContact: BusinessContactCollection, displayName:  UserDisplayName(req)  });
     });
 }
 
@@ -30,7 +30,7 @@ export function DisplayEditPage(req: express.Request, res: express.Response, nex
   let id = req.params.id;
 
   // pass the id to the db and read the business contact into the edit page
-  businessContact.findById(id, {}, {}, function(err, businessContactToEdit)
+  BusinessContact.findById(id, {}, {}, function(err, BusinessContactToEdit)
   {
     if(err)
     {
@@ -46,7 +46,7 @@ export function DisplayEditPage(req: express.Request, res: express.Response, nex
 export function ProcessAddPage(req: express.Request, res: express.Response, next: express.NextFunction): void 
 {
   // instantiate a new Business Contact to Add
-  let newBusinessContact = new businessContact
+  let newBusinessContact = new BusinessContact
   ({
     "Contact Name": req.body.businessContactName,
     "Contact Number": req.body.businessContactNumber,
@@ -54,7 +54,7 @@ export function ProcessAddPage(req: express.Request, res: express.Response, next
   });
 
   // Insert the new Business Contact object into the database (businessContact collection)
-  businessContact.create(newBusinessContact, function(err: CallbackError)
+  BusinessContact.create(newBusinessContact, function(err: CallbackError)
   {
     if(err)
     {
@@ -72,7 +72,7 @@ export function ProcessEditPage(req: express.Request, res: express.Response, nex
   let id = req.params.id;
 
   // instantiate a new Business Contact to Edit
-  let updatedBusinessContact = new businessContact
+  let updatedBusinessContact = new BusinessContact
   ({
     "_id": id,
     "Contact Name": req.body.businessContactName,
@@ -81,7 +81,7 @@ export function ProcessEditPage(req: express.Request, res: express.Response, nex
   });
 
   // update the Business Contact in the database
-  businessContact.updateOne({_id: id}, updatedBusinessContact, function(err: CallbackError)
+  BusinessContact.updateOne({_id: id}, updatedBusinessContact, function(err: CallbackError)
   {
     if(err)
     {
@@ -99,7 +99,7 @@ export function ProcessDeletePage(req: express.Request, res: express.Response, n
   let id = req.params.id;
 
   // pass the id to the database and delete the businessContact
-  businessContact.remove({_id: id}, function(err: CallbackError)
+  BusinessContact.remove({_id: id}, function(err: CallbackError)
   {
     if(err)
     {

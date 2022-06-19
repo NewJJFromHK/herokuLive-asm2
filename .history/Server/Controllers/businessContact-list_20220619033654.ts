@@ -81,7 +81,7 @@ export function ProcessEditPage(req: express.Request, res: express.Response, nex
   });
 
   // update the Business Contact in the database
-  businessContact.updateOne({_id: id}, updatedBusinessContact, function(err: CallbackError)
+  BbusinessContact.updateOne({_id: id}, updatedBusinessContact, function(err: CallbackError)
   {
     if(err)
     {
@@ -99,7 +99,7 @@ export function ProcessDeletePage(req: express.Request, res: express.Response, n
   let id = req.params.id;
 
   // pass the id to the database and delete the businessContact
-  businessContact.remove({_id: id}, function(err: CallbackError)
+  BusinessContact.remove({_id: id}, function(err: CallbackError)
   {
     if(err)
     {
