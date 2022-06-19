@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Secret = exports.HostName = exports.RemoteURL = exports.LocalURI = void 0;
+exports.Secret = exports.HostName = exports.RemoteURI = exports.LocalURI = void 0;
 exports.LocalURI = "mongodb://127.0.0.1/media";
-exports.RemoteURL = process.env.RemoteURL;
+exports.RemoteURI = process.env.RemoteURI;
 exports.HostName = "MongoDB Atlas";
-exports.Secret = "mySecret";
+exports.Secret = "someSecret";
 //# sourceMappingURL=db.js.map

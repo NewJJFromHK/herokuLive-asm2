@@ -47,6 +47,4 @@ function onError(error) {
 function onListening() {
     let addr = server.address();
     let bind = 'pipe ' + addr;
-    (0, debug_1.default)('Listening on ' + bind);
-}
-//# sourceMappingURL=server.js.map
+    (0, debug_1.default)('Listening o
