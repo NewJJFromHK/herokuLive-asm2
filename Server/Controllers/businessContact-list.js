@@ -50,9 +50,9 @@ function ProcessEditPage(req, res, next) {
     let id = req.params.id;
     let updatedBusinessContact = new businessContact_1.default({
         "_id": id,
-        "Contact Name": req.body.ContactName,
-        "Contact Number": req.body.ContactNumber,
-        "Email Address": req.body.EmailAddress
+        "ContactName": req.body.ContactName,
+        "ContactNumber": req.body.ContactNumber,
+        "EmailAddress": req.body.EmailAddress
     });
     businessContact_1.default.updateOne({ _id: id }, updatedBusinessContact, function (err) {
         if (err) {
