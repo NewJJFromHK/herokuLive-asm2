@@ -48,9 +48,9 @@ export function ProcessAddPage(req: express.Request, res: express.Response, next
   // instantiate a new Business Contact to Add
   let newBusinessContact = new businessContact
   ({
-    "Contact Name": req.body.ContactName,
-    "Contact Number": req.body.ContactNumber,
-    "Email Address": req.body.EmailAddress
+    "Contact Name": req.body.businessContactName,
+    "Contact Number": req.body.businessContactNumber,
+    "Email Address": req.body.businessContactEmailAddress
   });
 
   // Insert the new Business Contact object into the database (businessContact collection)
@@ -75,9 +75,9 @@ export function ProcessEditPage(req: express.Request, res: express.Response, nex
   let updatedBusinessContact = new businessContact
   ({
     "_id": id,
-    "Contact Name": req.body.ContactName,
-    "Contact Number": req.body.ContactNumber,
-    "Email Address": req.body.EmailAddress
+    "Contact Name": req.body.businessContactName,
+    "Contact Number": req.body.businessContactNumber,
+    "Email Address": req.body.businessContactEmailAddress
   });
 
   // update the Business Contact in the database

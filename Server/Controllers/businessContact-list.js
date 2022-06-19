@@ -27,15 +27,15 @@ function DisplayEditPage(req, res, next) {
             console.error(err);
             res.end(err);
         }
-        res.render('index', { title: 'Edit', page: 'edit', BusinessContact: BusinessContactToEdit, displayName: (0, Util_1.UserDisplayName)(req) });
+        res.render('index', { title: 'Edit', page: 'edit', businessContact: businessContactToEdit, displayName: (0, Util_1.UserDisplayName)(req) });
     });
 }
 exports.DisplayEditPage = DisplayEditPage;
 function ProcessAddPage(req, res, next) {
     let newBusinessContact = new businessContact_1.default({
-        "Contact Name": req.body.businessContactName,
-        "Contact Number": req.body.businessContactNumber,
-        "Email Address": req.body.businessContactEmailAddress
+        "Contact Name": req.body.ContactName,
+        "Contact Number": req.body.ContactNumber,
+        "Email Address": req.body.EmailAddress
     });
     businessContact_1.default.create(newBusinessContact, function (err) {
         if (err) {
@@ -50,9 +50,9 @@ function ProcessEditPage(req, res, next) {
     let id = req.params.id;
     let updatedBusinessContact = new businessContact_1.default({
         "_id": id,
-        "Contact Name": req.body.businessContactName,
-        "Contact Number": req.body.businessContactNumber,
-        "Email Address": req.body.businessContactEmailAddress
+        "Contact Name": req.body.ContactName,
+        "Contact Number": req.body.ContactNumber,
+        "Email Address": req.body.EmailAddress
     });
     businessContact_1.default.updateOne({ _id: id }, updatedBusinessContact, function (err) {
         if (err) {
