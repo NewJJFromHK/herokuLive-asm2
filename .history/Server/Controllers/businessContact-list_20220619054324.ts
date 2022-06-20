@@ -6,11 +6,9 @@ import businessContact from '../Models/businessContact';
 
 import { UserDisplayName  } from '../Util';
 
-
 export function DisplayBusinessContactListPage(req: express.Request, res: express.Response, next: express.NextFunction): void 
 {
-    businessContact.find(function(err, businessContactCollection)
-
+    businessContact.find(function(err, sortbusinessContactCollection)
     {
       // Database error
       if(err)
@@ -18,9 +16,9 @@ export function DisplayBusinessContactListPage(req: express.Request, res: expres
         console.error(err.message);
         res.end(err);
       }
-      
+
       res.render('index', { title: 'Business Contact List', page: 'businessContact-list', businessContact: businessContactCollection, displayName:  UserDisplayName(req)  });
-    }).sort({contactName: 1}); //sort by Contact Name
+    });
 }
 
 export function DisplayAddPage(req: express.Request, res: express.Response, next: express.NextFunction): void 

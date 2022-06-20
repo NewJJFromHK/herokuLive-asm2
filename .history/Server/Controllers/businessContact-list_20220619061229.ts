@@ -20,7 +20,7 @@ export function DisplayBusinessContactListPage(req: express.Request, res: expres
       }
       
       res.render('index', { title: 'Business Contact List', page: 'businessContact-list', businessContact: businessContactCollection, displayName:  UserDisplayName(req)  });
-    }).sort({contactName: 1}); //sort by Contact Name
+    });
 }
 
 export function DisplayAddPage(req: express.Request, res: express.Response, next: express.NextFunction): void 
@@ -42,6 +42,7 @@ export function DisplayEditPage(req: express.Request, res: express.Response, nex
     }
 
     // show the edit view with the data
+    ContactName = articles.slice(0, 3)
     res.render('index', { title: 'Edit', page: 'edit', businessContact: businessContactToEdit, displayName:  UserDisplayName(req) })
   });
 }

@@ -9,6 +9,7 @@ import { UserDisplayName  } from '../Util';
 
 export function DisplayBusinessContactListPage(req: express.Request, res: express.Response, next: express.NextFunction): void 
 {
+    businessContact.sort( { contactName: 1} )
     businessContact.find(function(err, businessContactCollection)
 
     {
@@ -20,7 +21,7 @@ export function DisplayBusinessContactListPage(req: express.Request, res: expres
       }
       
       res.render('index', { title: 'Business Contact List', page: 'businessContact-list', businessContact: businessContactCollection, displayName:  UserDisplayName(req)  });
-    }).sort({contactName: 1}); //sort by Contact Name
+    });
 }
 
 export function DisplayAddPage(req: express.Request, res: express.Response, next: express.NextFunction): void 
