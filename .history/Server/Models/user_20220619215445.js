@@ -1,7 +1,4 @@
-/*File Name: user.js
-Student Name: Kin Fung Lee
-Student ID 301194080
-Date: 19 June 2022 */
+
 
 "use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {

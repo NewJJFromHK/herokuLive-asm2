@@ -1,9 +1,9 @@
-#!/usr/bin/env node
-
-/*File Name: server.js
+/*File Name: app.js
 Student Name: Kin Fung Lee
 Student ID 301194080
 Date: 19 June 2022 */
+
+#!/usr/bin/env node
 
 "use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {

@@ -1,4 +1,4 @@
-/*File Name: businessContact-list.js
+/*File Name: businessContact-list.kjs
 Student Name: Kin Fung Lee
 Student ID 301194080
 Date: 19 June 2022 */

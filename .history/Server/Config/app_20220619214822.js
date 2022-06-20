@@ -1,7 +1,4 @@
-/*File Name: app.js
-Student Name: Kin Fung Lee
-Student ID 301194080
-Date: 19 June 2022 */
+
 
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {

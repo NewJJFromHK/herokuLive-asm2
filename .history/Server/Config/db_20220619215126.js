@@ -1,7 +1,4 @@
-/*File Name: db.js
-Student Name: Kin Fung Lee
-Student ID 301194080
-Date: 19 June 2022 */
+
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
